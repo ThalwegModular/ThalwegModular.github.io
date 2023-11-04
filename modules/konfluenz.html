@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js">
+        </script>
+        <script> 
+            $(function(){
+                $("#header").load("../header.html");
+                $("#footer").load("../footer.html");
+            });
+        </script> 
+    </head>
+    <body style="background-color:#ececec;">
+        <div id="header"></div>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            footer {
+                margin-top: auto;
+            }
+
+            .buttonMG {
+             display: inline-block;
+             padding: 12px 24px;
+             border: 1px solid #4f4f4f;
+             border-radius: 4px;
+             transition: all 0.2s ease-in;
+             position: relative;
+             overflow: hidden;
+             font-size: 19px;
+             color: black;
+             z-index: 1;
+             cursor: pointer;
+            }           
+
+            .buttonMG:before {
+             content: "";
+             position: absolute;
+             left: 50%;
+             transform: translateX(-50%) scaleY(1) scaleX(1.25);
+             top: 100%;
+             width: 140%;
+             height: 180%;
+             background-color: rgba(0, 0, 0, 0.05);
+             border-radius: 50%;
+             display: block;
+             transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+             z-index: -1;
+            }           
+
+            .buttonMG:after {
+             content: "";
+             position: absolute;
+             left: 55%;
+             transform: translateX(-50%) scaleY(1) scaleX(1.45);
+             top: 180%;
+             width: 160%;
+             height: 190%;
+             background-color: #39bda7;
+             border-radius: 50%;
+             display: block;
+             transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+             z-index: -1;
+            }           
+
+            .buttonMG:hover {
+             color: #ffffff;
+             border: 1px solid #39bda7;
+            }           
+
+            .buttonMG:hover:before {
+             top: -35%;
+             background-color: #39bda7;
+             transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+            }           
+
+            .buttonMG:hover:after {
+             top: -45%;
+             background-color: #39bda7;
+             transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+            }
+        </style>
+        <div style="display: flex;">
+            <img src="Images/konfluenz/konfluenz0001.png" alt="Placeholder Image" width="400" height="600" style="padding: 1.5%;">
+            <div style="padding-top: 5%; display: flex; flex-direction: column; margin-right: 10%;">
+                <img src="Images/konfluenz/konfluenz0001.png" alt="Placeholder Image" width="80" height="120" style="padding: 2%;">
+                <img src="Images/konfluenz/konfluenz0002.png" alt="Placeholder Image" width="80" height="120" style="padding: 2%;">
+                <img src="Images/konfluenz/konfluenz0003.png" alt="Placeholder Image" width="80" height="120" style="padding: 2%;">
+                <img src="Images/konfluenz/konfluenz0004.png" alt="Placeholder Image" width="80" height="120" style="padding: 2%;">
+            </div>
+            <div style="margin-top: 200px;">
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 40px;
+                font-weight: 700; margin-top: 0%; margin-bottom: 0%;">Konfluenz</p>
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 22px;
+                font-weight: 600; margin-top: 0%;">Production and Performance Mixer</p>
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 20px;
+                font-weight: 600; margin-top: 0%;">16 HP | +12: n mA, -12: n mA</p>
+                <button class="buttonMG" style="margin-bottom: 20px;" onclick="window.open('https://www.modulargrid.net/e/modules_racks/add/46199')">Add on ModularGrid</button>
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 18px;
+                font-weight: 600; margin-top: 0%; width: 350px;">
+                    Konfluenz is a high-quality three chanel eurorack mixer designed for both studio production and live performance. Each chanel features a solo and mute button, as well as a send and return for external effects. 
+                </p>
+            </div>
+        </div>
+       <hr style="margin: 50px; border: none; height: 2px; background-color: #3333335a; width: 95%;"> 
+       <div style="text-align: center;">   
+           <p style=" 
+                font-family: 'Barlow Condensed';
+                font-size: 40px;
+                font-weight: 700; margin-top: 0%; margin-bottom: 0%;">Features</p>
+        </div>
+        <footer>
+            <div id="footer"></div>
+        </footer>
+    </body>
+</html>
