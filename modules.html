@@ -13,13 +13,14 @@
         </script> 
     </head>
     <body style="background-color:#ececec;">
-        <div id="header"></div>
+        <header id="header"></header>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
             body {
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
+                margin: 0;
             }
 
             footer {
@@ -36,17 +37,31 @@
                 background: radial-gradient(circle, rgba(196,196,196,1) 0%, rgba(238,238,238,1) 200%);
                 border-radius: 5px;
                 cursor: pointer;
+                
+            }
+            .modulePic {
+                transition: transform .2s ease-in-out;
+            }
+            .modulePic:hover {
+                transform: scale(1.05);
             }
         </style>
         <p style="
         font-family: 'Barlow Condensed';
         font-size: 30px;
         font-weight: 600;">Modules</p>
+        <div style="display: flex;"> 
 
-        <div class="productCard" onclick="window.location.href='konfluenz.html'">  
-            <img src="Images/konfluenz/konfluenz0001.png" alt="Placeholder Image" width="200" height="300" style="padding: 2%;">
-            <p style="font-family: barlow condensed; font-size: 25px; font-weight: 600; margin-top: 0; margin-bottom: 0;">Konfluenz</p>
-            <p style="font-family: barlow condensed; font-size: 20px; font-weight: 400; margin-top: .5%;">Production and Performance Mixer</p>
+            <section class="productCard" onclick="window.location.href='konfluenz.html'">  
+                <img class="modulePic" src="Images/konfluenz/konfluenz0001.png" alt="Placeholder Image" width="200" height="300" style="padding: 2%;">
+                <p style="font-family: barlow condensed; font-size: 25px; font-weight: 600; margin-top: 0; margin-bottom: 0;">Konfluenz</p>
+                <p style="font-family: barlow condensed; font-size: 20px; font-weight: 400; margin-top: .5%;">Production and Performance Mixer</p>
+            </section>
+            <section class="productCard" onclick="window.location.href='threefold.html'">  
+                <img class="modulePic" src="Images/threefold/threefold0001.png" alt="Placeholder Image" width="50" height="300" style="padding: 2%; align-self: center;">
+                <p style="font-family: barlow condensed; font-size: 25px; font-weight: 600; margin-top: 0; margin-bottom: 0;">Threefold</p>
+                <p style="font-family: barlow condensed; font-size: 20px; font-weight: 400; margin-top: .5%;">Passive Quad Multiple</p>
+            </section>
         </div>
         
         <footer>
