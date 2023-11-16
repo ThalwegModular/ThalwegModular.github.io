@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="Images/thalwegLogo.ico" type="image/x-icon">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js">
+        </script>
+        <script> 
+            $(function(){
+                $("#header").load("../header.html");
+                $("#footer").load("../footer.html");
+                
+            });
+        </script> 
+    </head>
+    <body style="background-color:#ececec;">
+        <header id="header"></header>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            footer {
+                margin-top: auto;
+            }
+
+            .buttonMG {
+             display: inline-block;
+             padding: 12px 24px;
+             border: 1px solid #4f4f4f;
+             border-radius: 4px;
+             transition: all 0.2s ease-in;
+             position: relative;
+             overflow: hidden;
+             font-size: 19px;
+             color: black;
+             z-index: 1;
+             cursor: pointer;
+            }           
+
+            .buttonMG:before {
+             content: "";
+             position: absolute;
+             left: 50%;
+             transform: translateX(-50%) scaleY(1) scaleX(1.25);
+             top: 100%;
+             width: 140%;
+             height: 180%;
+             background-color: rgba(0, 0, 0, 0.05);
+             border-radius: 50%;
+             display: block;
+             transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+             z-index: -1;
+            }           
+
+            .buttonMG:after {
+             content: "";
+             position: absolute;
+             left: 55%;
+             transform: translateX(-50%) scaleY(1) scaleX(1.45);
+             top: 180%;
+             width: 160%;
+             height: 190%;
+             background-color: #39bda7;
+             border-radius: 50%;
+             display: block;
+             transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+             z-index: -1;
+            }           
+
+            .buttonMG:hover {
+             color: #ffffff;
+             border: 1px solid #39bda7;
+            }           
+
+            .buttonMG:hover:before {
+             top: -35%;
+             background-color: #39bda7;
+             transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+            }           
+
+            .buttonMG:hover:after {
+             top: -45%;
+             background-color: #39bda7;
+             transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+            }
+
+            .seperator {
+                margin-top: 3%;
+                margin-bottom: 2%;
+                border: none;
+                height: 2px;
+                background-color: #3333335a;
+                width: 95%;
+            }
+
+            .descTitle {
+                text-align: center;
+                font-family: 'Barlow Condensed';
+                font-size: 45px;
+                font-weight: 700; 
+                margin-top: 0%; 
+                margin-bottom: 1%;
+            }
+
+            .descSubTitle {
+                text-align: center;
+                font-family: 'Barlow Condensed';
+                font-size: 35px;
+                font-weight: 700; 
+                margin-top: 0%; 
+                margin-bottom: 1%;
+            }
+            .descSubSubTitle {
+                text-align: left;
+                font-family: 'Barlow Condensed';
+                font-size: 25px;
+                font-weight: 500; 
+                margin-top: 0%; 
+                margin-bottom: 1%;
+            }
+        </style>
+        <main style="display: flex;">
+            <div style="width: 30%; display: flex; justify-content: center;">
+                <img id="mainImage" src="Images/durchlass/durchlass0001.png" alt="Placeholder Image" width="236" height="600" style="padding: 1.5%;">
+            </div>
+            <div style="padding-top: 5%; display: flex; flex-direction: column; margin-right: 10%; width: 10%;">
+                <img id="smallImage1" src="Images/durchlass/durchlass0001.png" alt="Placeholder Image" width="47" height="120" style="padding: 2%; cursor: pointer; "onclick="changeImage('smallImage1')">
+                <img id="smallImage2" src="Images/durchlass/durchlass0002.png" alt="Placeholder Image" width="47" height="120" style="padding: 2%; cursor: pointer; "onclick="changeImage('smallImage2')">
+                <img id="smallImage3" src="Images/durchlass/durchlass0003.png" alt="Placeholder Image" width="47" height="120" style="padding: 2%; cursor: pointer; "onclick="changeImage('smallImage3')">
+                <img id="smallImage4" src="Images/durchlass/durchlass0004.png" alt="Placeholder Image" width="47" height="120" style="padding: 2%; cursor: pointer; "onclick="changeImage('smallImage4')">
+            </div>
+            <script>
+                function changeImage(id) {
+                    var mainImage = document.getElementById("mainImage");
+                    var smallImage = document.getElementById(id);
+                    mainImage.src = smallImage.src;
+                }
+            </script>
+            <div style="margin-top: 200px;">
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 40px; 
+                font-weight: 600; margin-top: 0%; margin-bottom: 0%;">Durchlass</p>
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 22px;
+                font-weight: 400; margin-top: 0%;">Multimode Filter</p>
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 20px;
+                font-weight: 500; margin-top: 0%;">16 HP | +12: n mA, -12: n mA</p>
+                <button class="buttonMG" style="margin-bottom: 20px;" onclick="window.open('https://www.modulargrid.net/e/modules_racks/add/46199')">Add on ModularGrid</button>
+                <p style="
+                font-family: 'Barlow Condensed';
+                font-size: 18px;
+                font-weight: 300; margin-top: 0%; width: 350px;">
+                    Durchlass is a versatile multimode filter. It is based around the famous Curtis CEM3320 filter chip and features four different filter types: A 24db lowpass, 6db and 12db bandpass and a 12db highpass. Both the cutoff frequency and resonance can be voltage controlled. 
+                </p>
+            </div>
+        </main>
+        <hr class="seperator"> 
+        <p class="descTitle">Features</p>
+           
+        <div style="display: flex; justify-content: space-evenly;">   
+            <div style="width: 20%;">
+                <p class="descSubTitle">Solo/Cue | Mute</p>
+                <div style="display: flex;">
+                    <div style="display: flex; flex-direction: column; align-items: left;">
+                        <div style="width: 170px;">
+                            <p class="descSubSubTitle">Mute</p>
+                            <p style="text-align: left;
+                            font-family: 'Barlow Condensed';
+                            font-size: 18px;
+                            font-weight: 400; margin-top: 0%; margin-bottom: 0%;">
+                            When the mute button is pressed, the channel is muted. The mute button will light up yellow when pressed.</p>
+                        </div>
+                        <div style="width: 170px; margin-top: 20%;">
+                            <p class="descSubSubTitle">Solo/Cue</p>
+                            <p style="text-align: left;
+                            font-family: 'Barlow Condensed';
+                            font-size: 18px;
+                            font-weight: 400; margin-top: 0%; margin-bottom: 0%;">
+                            When the Solo/Cue button is pressed, the channel is either soloed or cued, if Cue mode is enabled. The Solo/Cue button will light up blue when pressed. Both Solo and Cue override the Mute button.</p>
+                        </div>
+                    </div>
+                    <div style="margin-left: 5px; display: flex; flex-direction: column;">
+                            <img src="Images/konfluenz/scmMute.png" alt="" width="120" height="150" style="padding: 2%;">
+                            <img src="Images/konfluenz/scmSolo.png" alt="" width="120" height="150" style="padding: 2%;">
+                            <img src="Images/konfluenz/scmSoloMute.png" alt="" width="120" height="150" style="padding: 2%;">
+                    </div>
+                    
+                </div>
+            </div>
+            <div style="width: 20%;"> 
+                <p class="descSubTitle">Send - Return</p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="display: flex;">
+                        <div style="width: 170px;">
+                            <p class="descSubSubTitle">Send - Return</p>
+                            <p style="text-align: left;
+                            font-family: 'Barlow Condensed';
+                            font-size: 18px;
+                            font-weight: 400; margin-top: 0%; margin-bottom: 0%;">
+                            Each chanel features a send and return for external effects. The send and return are both 3.5mm jacks. The send is pre-, and the return post-fader. The Mix knob controls the amount of the return signal that is mixed with the channel signal.
+                            </p>
+                        </div>
+                        <div style="margin-left: 5px;">
+                            <img src="Images/konfluenz/sendReturn.png" alt="" width="120" height="252" style="padding: 2%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 20%;">
+                <p style="text-align: center;
+                font-family: 'Barlow Condensed';
+                font-size: 35px;
+                font-weight: 700; margin-top: 0%; margin-bottom: 6%;">Output</p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column;">
+
+                            <div style="width: 170px;">
+                                <p class="descSubSubTitle">Headphone Out</p>
+                                <p style="text-align: left;
+                                font-family: 'Barlow Condensed';
+                                font-size: 18px;    	
+                                font-weight: 400; margin-top: 0%; margin-bottom: 0%;">
+                                The Headphone Out gives you a way to monitor your mix. The Mix knob lets you determine the amount of main and cue signal that is sent to the Headphone Out. The Headphone Out is mono.
+                            </p>
+                            </div>
+                            <div style="width: 170px; margin-top: 20%;">
+                                <p class="descSubSubTitle">Main Out</p>
+                                <p style="text-align: left;
+                                font-family: 'Barlow Condensed';
+                                font-size: 18px;
+                                font-weight: 400; margin-top: 0%; margin-bottom: 0%;">
+                                The Main Out gets your mix ready to be sent to your speakers or another module. It is controlled by the main fader.
+                            </p>
+                            </div>
+                        </div>
+                        <div style="margin-left: 5px;">
+                            <img src="Images/konfluenz/headphoneOut.png" alt="" width="120" height="353" style="padding: 2%;">
+                            <img src="Images/konfluenz/mainOut.png" alt="" width="120" height="85" style="padding: 2%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="seperator"> 
+        <p class="descTitle">Where to buy</p>
+        <div style="display: flex; justify-content: space-evenly;">
+            <div style="width: 30%; display: flex; justify-content: center;">
+                <img src="https://www.exploding-shed.com/media/90/6b/25/1655210897/Logo.svg" style="cursor: pointer;"
+                alt="" onclick="window.open('http://www.exploding-shed.com', '_blank')">
+            </div>
+            <div style="width: 30%; display: flex; justify-content: center;">
+                <img src="https://www.3u-shop.de/storage/images/Logo%2525203ushop%2525202021.jpg?hash=7cc4680dfa3a2d57a98acc0bf30d7b42fd86e163&height=80&width=2560&shop=61471354" 
+                style="cursor: pointer; mix-blend-mode: multiply;"
+                alt="" onclick="window.open('https://www.3u-shop.de/', '_blank')">
+            </div>
+            <div style="width: 30%; display: flex; justify-content: center;">
+                <img src="https://www.thonk.co.uk/wp-content/uploads/2016/08/cropped-cropped-cropped-cropped-cropped-cropped-cropped-cropped-cropped-cropped-cropped-cropped-logo3-1-1.png" 
+                style="cursor: pointer; mix-blend-mode: multiply;"
+                alt="" onclick="window.open('https://www.3u-shop.de/', '_blank')">
+            </div>
+        </div>
+        <footer>
+            <div id="footer"></div>
+        </footer>
+    </body>
+</html>
